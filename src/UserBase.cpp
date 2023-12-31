@@ -21,7 +21,7 @@ UserBase::~UserBase()
 
 void UserBase::showUsers()
 {
-	cout << setw(17) << "ID ïîëüçîâàòåëÿ" << setw(20) << "Èìÿ ïîëüçîâàòåëÿ" << setw(10) << "Ëîãèí" << endl;
+	cout << setw(17) << "ID Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»Â¤" << setw(20) << "Â»Ð¼Â¤ Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»Â¤" << setw(10) << "Ð‹Ð¾Ð³Ð¸Ð½" << endl;
 	for (int i = 0; i < usrBase->size(); i++)
 	{
 		cout << setw(17) << i << setw(20) << usrBase->at(i).name << setw(10) << usrBase->at(i).login << endl;

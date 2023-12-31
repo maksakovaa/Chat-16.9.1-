@@ -15,15 +15,15 @@ void inputCleaner()
 void incorrect()
 {
 	inputCleaner();
-	cout << "Íåêîððåêòíûé ââîä, ïîâòîðèòå:" << endl;
+	cout << "ÐÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ð¹ Ð²Ð²Ð¾Ð´, Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ:" << endl;
 }
 
 bool nonLatinChk(string& text)
 {
-	string letters = "àáâãäå¸æùèéêëìíîïðñòóôõö÷øùúûüýþÿÀÁÂÃÄÅ¨ÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞß";
+	string letters = "Ð°Ð±Ð²Ð³Ð´ÐµÑ‘Ð¶Ñ‰Ð¸Ð¹ÐºÐ»Ð¼Ð½Ð¾Ð¿Ñ€ÑÑ‚ÑƒÑ„Ñ…Ñ†Ñ‡ÑˆÑ‰ÑŠÑ‹ÑŒÑÑŽÑÐÐ‘Ð’Ð“Ð”Ð•ÐÐ–Ð—Ð˜Ð™ÐšÐ›ÐœÐÐžÐŸÐ Ð¡Ð¢Ð£Ð¤Ð¥Ð¦Ð§Ð¨Ð©ÐªÐ«Ð¬Ð­Ð®Ð¯";
 	if (text.find_first_of(letters) != string::npos)
 	{
-		cout << "ERROR: Íåêîððåêòíûé ââîä. Èñïîëüçóéòå ëàòèííèöó." << endl;
+		cout << "ERROR: ÐÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ð¹ Ð²Ð²Ð¾Ð´. Ð˜ÑÐ¿Ð¾Ð»ÑŒÐ·ÑƒÐ¹Ñ‚Ðµ Ð»Ð°Ñ‚Ð¸Ð½Ð½Ð¸Ñ†Ñƒ." << endl;
 		return false;
 	}
 	return true;
@@ -33,7 +33,7 @@ bool noSpacesChk(string& text)
 {
 	if (text.find_first_of(" ") != string::npos)
 	{
-		cout << "ERROR: Íåêîððåêòíûé ââîä. Íå èñïîëüçóéòå ïðîáåë." << endl;
+		cout << "ERROR: ÐÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ð¹ Ð²Ð²Ð¾Ð´. ÐÐµ Ð¸ÑÐ¿Ð¾Ð»ÑŒÐ·ÑƒÐ¹Ñ‚Ðµ Ð¿Ñ€Ð¾Ð±ÐµÐ»." << endl;
 		return false;
 	}
 	return true;
@@ -43,7 +43,7 @@ bool lengthChk(string& text)
 {
 	if (text.size() < 4)
 	{
-		cout << "ERROR: Äëèíà äîëæíà áûòü íå ìåíåå 4 ñèìâîëîâ." << endl;
+		cout << "ERROR: Ð”Ð»Ð¸Ð½Ð° Ð´Ð¾Ð»Ð¶Ð½Ð° Ð±Ñ‹Ñ‚ÑŒ Ð½Ðµ Ð¼ÐµÐ½ÐµÐµ 4 ÑÐ¸Ð¼Ð²Ð¾Ð»Ð¾Ð²." << endl;
 		return false;
 	}
 	return true;
@@ -61,7 +61,7 @@ bool regLoginChk(string& _login)
 
 	if (Users->loginCheck(_login))
 	{
-		cout << "ERROR: Èìÿ ïîëüçîâàòåëÿ óæå çàíÿòî." << endl;
+		cout << "ERROR: Ð˜Ð¼Ñ Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»Ñ ÑƒÐ¶Ðµ Ð·Ð°Ð½ÑÑ‚Ð¾." << endl;
 		errCount++;
 	}
 
@@ -71,7 +71,7 @@ bool regLoginChk(string& _login)
 	}
 	else
 	{
-		cout << "Ïîâòîðèòå ââîä:" << endl;
+		cout << "ÐŸÐ¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´:" << endl;
 		return false;
 	}
 }
@@ -92,7 +92,7 @@ bool regPwdChk(string& _pwd)
 	}
 	else
 	{
-		cout << "Ïîâòîðèòå ââîä:" << endl;
+		cout << "ÐŸÐ¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´:" << endl;
 		return false;
 	}
 }

@@ -47,7 +47,7 @@ std::vector<int> Chat::getMsgToCount(string msgFrom = "ALL", string msgTo = "ALL
 
 void Chat::emptyMsg()
 {
-	std::cout << "Пока здесь еще никто ничего не писал" << std::endl;
+	std::cout << "РџРѕРєР° Р·РґРµСЃСЊ РµС‰Рµ РЅРёРєС‚Рѕ РЅРёС‡РµРіРѕ РЅРµ РїРёСЃР°Р»" << std::endl;
 }
 
 void Chat::printMsg(std::vector<int>& msgIndex)
